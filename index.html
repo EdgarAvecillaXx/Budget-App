@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget App</title>
+
+    <!--? CSS style & icons -->
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -15,11 +18,11 @@
             <div class="budget_title">
                 Avalaible budget
             </div>
-            <div class="budget_value">+ $2000</div>
+            <div class="budget_value"></div>
             <div class="budget_income clearStyles">
                 <div class="budget_income--text">Incomes</div>
                 <div class="right">
-                    <div class="budget_income--value">+ $2000</div>
+                    <div class="budget_income--value"></div>
                     <div class="budget_income--percentage">&nbsp;</div>
                 </div>
             </div>
@@ -27,11 +30,40 @@
             <div class="budget_expense clearStyles">
                 <div class="budget_expense--text">Expenses</div>
                 <div class="right">
-                    <div class="budget_expense--value">- $2000</div>
-                    <div class="budget_expense--percentage">45%</div>
+                    <div class="budget_expense--value"></div>
+                    <div class="budget_expense--percentage"></div>
                 </div>
             </div>
     </header>
+
+    <section class="container clearStyles">
+        <div class="income">
+            <h2 class="income_title">Incomes</h2>
+            <div id="incomes-list">
+                <div class="element clearStyles">
+                    <div class="element_description"></div>
+                    <div class="right clearStyles">
+                        <div class="element_value"></div>
+                        <div class="element_delete">
+                            <button class="element_delete--btn"><i class="bi bi-trash-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="expense">
+            <h2 class="expense_title">Expenses</h2>
+            <div class="element clearStyles">
+                <div class="element_description"></div>
+                <div class="right clearStyles">
+                    <div class="element_value"></div>
+                    <div class="element_delete">
+                        <button class="element_delete--btn"><i class="bi bi-trash-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 <script src="./js/Data.js"></script>
