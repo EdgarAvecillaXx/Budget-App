@@ -105,3 +105,109 @@ body {
   text-align: center;
   border-radius: 3px;
 }
+
+.container {
+  width: 860px;
+  margin: 60px auto;
+}
+
+.income {
+  float: left;
+  width: 370px;
+  margin-right: 70px;
+}
+
+.expense {
+  float: left;
+  width: 370px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.income_title {
+  color: #28b9b5;
+}
+.expense_title {
+  color: #ff5049;
+}
+
+.element {
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.element:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+.element:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.element_description {
+  float: left;
+}
+
+.element_value {
+  float: left;
+  transition: transform 0.3s;
+}
+
+.element_percentage {
+  float: left;
+  margin-left: 20px;
+  transition: transform 0.3s;
+  font-size: 11px;
+  background-color: #ffdad9;
+  padding: 3px;
+  border-radius: 3px;
+  width: 45px;
+  text-align: center;
+}
+
+.income .element_value,
+.income .element_delete--btn {
+  color: #28b9b5;
+}
+
+.expense .element_value,
+.expense .element_percentage,
+.expense .element_delete--btn {
+  color: #ff5049;
+}
+
+.element_delete {
+  float: left;
+}
+
+.element_delete--btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.element_delete--btn:focus {
+  outline: none;
+}
+.element_delete--btn:active {
+  transform: translateY(2px);
+}
+
+.element:hover .element_delete--btn {
+  display: block;
+}
+.element:hover .element_value {
+  transform: translateX(-20px);
+}
+.element:hover .element_percentage {
+  transform: translateX(-20px);
+}
