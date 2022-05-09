@@ -46,7 +46,6 @@ const totalExpense = () => {
   for (const expense of expenses) {
     totalExpense += expense.value;
   }
-  console.log(totalExpense);
   return totalExpense;
 };
 
@@ -55,7 +54,6 @@ function loadHeader() {
   const budget = totalIncome() - totalExpense();
   const expensePercentage = totalExpense() / totalIncome();
   document.querySelector(".budget_value").innerHTML = currencyFormat(budget);
-  console.log(currencyFormat(budget));
   document.querySelector(".budget_income--value").innerHTML = currencyFormat(
     totalIncome()
   );
@@ -67,7 +65,7 @@ function loadHeader() {
 }
 //? HEADER BLOCK END
 
-//? LIST BLOCK START
+//? INCOME LIST START
 //* load all incomes to income list section
 function loadIncomes() {
   //* this variable is needed to concat all the HTML elements created
@@ -107,7 +105,9 @@ const deleteIncome = (id) => {
   loadHeader();
   loadIncomes();
 };
+//? INCOME LIST END
 
+//? EXPENSE LIST START
 //* load all expenses to expense list section
 function loadExpenses() {
   let expenseHTML = "";
@@ -150,3 +150,22 @@ const deleteExpense = (id) => {
   loadHeader();
   loadExpenses();
 };
+//? EXPENSE LIST END
+
+//? ADD SECTION START
+document.querySelector(".add_btn").addEventListener("click", () => {
+  let form = document.forms["form"];
+  let type = form["type"];
+  let description = form["description"];
+  let value = form["value"];
+  if (type.value === "income") {
+    //* + before value change the string value to a number
+    incomes.push(new Income(description.value, +value.value));
+    loadIncomes();
+  } else {
+    expenses.push(new Expense(description.value, +value.value));
+    loadExpenses();
+  }
+  loadHeader();
+});
+//? ADD SECTION END
