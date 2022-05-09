@@ -13,12 +13,16 @@
 </head>
 
 <body>
+
+    <!--? HEADER SECTION -->
     <header class="header">
         <div class="budget">
             <div class="budget_title">
                 Avalaible budget
             </div>
             <div class="budget_value"></div>
+
+            <!--* income div-->
             <div class="budget_income clearStyles">
                 <div class="budget_income--text">Incomes</div>
                 <div class="right">
@@ -27,6 +31,7 @@
                 </div>
             </div>
 
+            <!--* expense div-->
             <div class="budget_expense clearStyles">
                 <div class="budget_expense--text">Expenses</div>
                 <div class="right">
@@ -36,7 +41,33 @@
             </div>
     </header>
 
+    <!--? ADDING SECTION-->
+    <section class="add">
+        <div class="add_container">
+            <form onsubmit="return false;" id="form">
+
+                <!--* type input-->
+                <select class="add_type" name="type" id="type">
+                    <option value="income" selected>+</option>
+                    <option value="expense">-</option>
+                </select>
+
+                <!--* description input-->
+                <input type="text" class="add_description" id="description" placeholder="Add description">
+
+                <!--* value input-->
+                <input type="number" class="add_value" id="value" placeholder="Value" step="any">
+
+                <!--* adding button-->
+                <button class="add_btn"><i class="bi bi-check2-circle"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!--? LIST SECTION-->
     <section class="container clearStyles">
+
+        <!--* income list-->
         <div class="income">
             <h2 class="income_title">Incomes</h2>
             <div id="incomes-list">
@@ -51,9 +82,11 @@
                 </div>
             </div>
         </div>
+
+        <!--* expense list-->
         <div class="expense">
-            <div id="expense-list">
-                <h2 class="expense_title">Expenses</h2>
+            <h2 class="expense_title">Expenses</h2>
+            <div id="expenses-list">
                 <div class="element clearStyles">
                     <div class="element_description"></div>
                     <div class="right clearStyles">
