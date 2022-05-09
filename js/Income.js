@@ -7,6 +7,6 @@ class Income extends Data {
   }
 
   get id() {
-    this._id;
+    return this._id;
   }
 }

@@ -3,10 +3,10 @@ class Expense extends Data {
 
   constructor(description, value) {
     super(description, value);
-    thid._id = ++Expense.counter;
+    this._id = ++Expense.counter;
   }
 
   get id() {
-    this._id;
+    return this._id;
   }
 }

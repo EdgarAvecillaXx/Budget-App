@@ -5,16 +5,16 @@ class Data {
   }
 
   get description() {
-    this._description;
+    return this._description;
   }
   set description(description) {
-    this._description = description;
+    return this._description = description;
   }
 
   get value() {
-    this._value;
+    return this._value;
   }
   set value(value) {
-    this._value = value;
+    return this._value = value;
   }
 }
